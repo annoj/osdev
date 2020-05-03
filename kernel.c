@@ -93,11 +93,10 @@ void terminal_scroll() {
 }
 
 void terminal_next_row() {
-	if (terminal_row == VGA_HEIGHT - 1) {
+	if (terminal_row == VGA_HEIGHT - 1)
 		terminal_scroll();
-	} else {
+	else
 		terminal_row++;
-	}
 }
  
 void terminal_putchar(char c) 
@@ -135,6 +134,5 @@ void kernel_main(void)
 	/* Initialize terminal interface */
 	terminal_initialize();
  
-	/* Newline support is left as an exercise. */
 	terminal_writestring("Hello, kernel World!\n");
 }
