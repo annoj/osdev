@@ -85,7 +85,17 @@ void terminal_putentryat(char c, uint8_t color, size_t x, size_t y)
  
 void terminal_putchar(char c) 
 {
+	// Handle newlines
+	if (c == '\n') {
+		terminal_next_row();
+		terminal_column = 0;
+		return;
+	}
+
+	// Put char to terminal buffer
 	terminal_putentryat(c, terminal_color, terminal_column, terminal_row);
+
+	// handle terminal boundaries (max col and max row)
 	if (++terminal_column == VGA_WIDTH) {
 		terminal_column = 0;
 		if (++terminal_row == VGA_HEIGHT)
