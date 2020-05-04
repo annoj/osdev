@@ -1,1 +1,3 @@
 sysroot/
+*.d
+*.kernel

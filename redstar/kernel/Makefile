@@ -1,7 +1,7 @@
 OSNAME?=redstar
 
-CC=/home/jona/bin/cross/bin/i686-elf-gcc
-AS=/home/jona/bin/cross/bin/i686-elf-as
+# CC=/home/jona/bin/cross/bin/i686-elf-gcc
+# AS=/home/jona/bin/cross/bin/i686-elf-as
 
 DEFAULT_HOST!=../host.sh
 HOST?=$(DEFAULT_HOST)
@@ -55,10 +55,10 @@ $(ARCHDIR)/crtbegin.o $(ARCHDIR)/crtend.o:
 	OBJ=`$(CC) $(CFLAGS) $(LDFLAGS) -print-file-name=$(@F)` && cp "$$OBJ" $@
 
 .c.o:
-	$(CC) -MD -c $< -o $@ -std=gnu99 $(CFLAGS) $(CPPFLAGS)
+	$(CC) -MD -c $< -o $@ -std=gnu99 $(CFLAGS)
 
 .S.o:
-	$(CC) -MD -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
+	$(CC) -MD -c $< -o $@ $(CFLAGS)
 
 clean:
 	rm -f $(OSNAME).kernel

@@ -8,9 +8,9 @@ CROSSDIR=/home/jona/bin/cross/bin
 export HOST=${HOST:-$(./host.sh)}
 export MAKE=/usr/bin/make
 
-export AR=${CROSSDIR}${HOST}-ar
-export AS=${CROSSDIR}${HOST}-as
-export CC=${CROSSDIR}${HOST}-gcc
+export AR=${CROSSDIR}/${HOST}-ar
+export AS=${CROSSDIR}/${HOST}-as
+export CC=${CROSSDIR}/${HOST}-gcc
 
 export PREFIX=/usr
 export EXEC_PREFIX=$PREFIX
