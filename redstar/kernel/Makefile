@@ -1,4 +1,4 @@
-OSNAME=redstar
+OSNAME?=redstar
 
 CC=/home/jona/bin/cross/bin/i686-elf-gcc
 AS=/home/jona/bin/cross/bin/i686-elf-as

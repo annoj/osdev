@@ -1,3 +1,5 @@
+export OSNAME=redstar
+
 SYSTEM_HEADER_PROJECTS="kernel"
 PROJECTS="kernel"
 
